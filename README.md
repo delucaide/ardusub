@@ -1,3 +1,14 @@
-# This is a fork for internal use of Blue Robotics
+# Simplified ArduSub Motor Slew Limiter
 
-For ArduSub releases, issues and pull requests, go to the [Upstream ArduPilot](https://github.com/ArduPilot/ardupilot). For questions and further information, check out the Blue Robotics [discussion forums](https://discuss.bluerobotics.com) and [Gitter channel](https://gitter.im/bluerobotics/discussion).
+This repository contains a distilled example demonstrating how a ramped slew
+limiter can be applied to every motor output in all vehicle modes.  A runtime
+parameter named `SLEW_LIMIT` controls how aggressively the outputs change.
+
+The implementation is intentionally lightweight so it can be exercised through
+unit tests without requiring the full firmware build.
+
+## Running the tests
+
+```bash
+pytest
+```
